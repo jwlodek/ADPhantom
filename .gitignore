@@ -8,3 +8,4 @@ documentation
 lib
 .svn*
 .idea
+*.local
