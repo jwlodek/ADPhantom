@@ -670,6 +670,7 @@ record(longout, "$(P)$(R)EDR")
 {
   field(DESC, "Extended Dynamic Range in ns")
   field(DTYP, "asynInt32")
+  field(EGU, "ns")
   field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PHANTOM_EDR")
 }
 
@@ -677,6 +678,7 @@ record(longin, "$(P)$(R)EDR_RBV")
 {
   field(DESC, "Extended Dynamic Range in ns")
   field(DTYP, "asynInt32")
+  field(EGU, "ns")
   field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PHANTOM_EDR")
   field(SCAN, "I/O Intr")
 }
@@ -685,6 +687,7 @@ record(longout, "$(P)$(R)FrameDelay")
 {
   field(DESC, "Frame Delay in us")
   field(DTYP, "asynInt32")
+  field(EGU, "us")
   field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PHANTOM_FRAME_DELAY")
 }
 
@@ -692,6 +695,7 @@ record(longin, "$(P)$(R)FrameDelay_RBV")
 {
   field(DESC, "Frame Delay in us")
   field(DTYP, "asynInt32")
+  field(EGU, "us")
   field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))PHANTOM_FRAME_DELAY")
   field(SCAN, "I/O Intr")
 }
