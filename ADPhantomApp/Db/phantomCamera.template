@@ -22,6 +22,7 @@ record(ao, "$(P)$(R)AcquireTimeMs") {
   field(DTYP, "Soft Channel")
   field(DESC, "Acquisition time in milliseconds")
   field(FLNK, "$(P)$(R)CalcAcquireTime PP NMS")
+  field(EGU, "ms")
 }
 
 record(calcout, "$(P)$(R)CalcAcquireTime") {
@@ -36,6 +37,7 @@ record(calcout, "$(P)$(R)AcquireTimeMs_RBV") {
   field(DTYP, "Soft Channel")
   field(INPA, "$(P)$(R)AcquireTime_RBV")
   field(CALC, "A * 1000")
+  field(EGU, "ms")
   field(SCAN, "1 second")
 }
 
