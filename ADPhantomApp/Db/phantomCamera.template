@@ -41,6 +41,31 @@ record(calcout, "$(P)$(R)AcquireTimeMs_RBV") {
   field(SCAN, "1 second")
 }
 
+
+record(ao, "$(P)$(R)AcquirePeriodMs") {
+  field(DTYP, "Soft Channel")
+  field(DESC, "Acquisition Period in milliseconds")
+  field(FLNK, "$(P)$(R)CalcAcquirePeriod PP NMS")
+  field(EGU, "ms")
+}
+
+record(calcout, "$(P)$(R)CalcAcquirePeriod") {
+  field(DTYP, "Soft Channel")
+  field(INPA, "$(P)$(R)AcquirePeriodMs")
+  field(CALC, "A / 1000")
+  field(OOPT, "On Change")
+  field(OUT, "$(P)$(R)AcquirePeriod PP NMS")
+}
+
+record(calcout, "$(P)$(R)AcquirePeriodMs_RBV") {
+  field(DTYP, "Soft Channel")
+  field(INPA, "$(P)$(R)AcquirePeriod_RBV")
+  field(CALC, "A * 1000")
+  field(EGU, "ms")
+  field(SCAN, "1 second")
+}
+
+
 ################################################################
 ###
 ### Partition and Cine Count
