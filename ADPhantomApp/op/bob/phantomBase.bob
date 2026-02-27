@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-11-05 10:43:00 by jwlodek-->
+<!--Saved on 2026-02-27 10:19:13 by jwlodek-->
 <display version="2.0.0">
   <name>phantomBase</name>
   <x>190</x>
@@ -481,7 +481,7 @@
     <x>5</x>
     <y>5</y>
     <width>19</width>
-    <height>14</height>
+    <height>13</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="11.0">
       </font>
@@ -606,7 +606,7 @@
     <x>5</x>
     <y>105</y>
     <width>31</width>
-    <height>14</height>
+    <height>13</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="11.0">
       </font>
@@ -937,46 +937,6 @@ Size</text>
   </widget>
   <widget type="label" version="2.0.0">
     <name>EDM activeXTextClass</name>
-    <text>Exposure (s)</text>
-    <x>205</x>
-    <y>120</y>
-    <width>80</width>
-    <font>
-      <font family="Liberation Sans" style="BOLD" size="12.0">
-      </font>
-    </font>
-    <foreground_color>
-      <color name="black-14" red="0" green="0" blue="0">
-      </color>
-    </foreground_color>
-    <background_color>
-      <color name="GLOBAL canvas" red="200" green="200" blue="200">
-      </color>
-    </background_color>
-    <vertical_alignment>1</vertical_alignment>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>EDM activeXTextClass</name>
-    <text>Acquisition Period (s)</text>
-    <x>205</x>
-    <y>160</y>
-    <width>140</width>
-    <font>
-      <font family="Liberation Sans" style="BOLD" size="12.0">
-      </font>
-    </font>
-    <foreground_color>
-      <color name="black-14" red="0" green="0" blue="0">
-      </color>
-    </foreground_color>
-    <background_color>
-      <color name="GLOBAL canvas" red="200" green="200" blue="200">
-      </color>
-    </background_color>
-    <vertical_alignment>1</vertical_alignment>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>EDM activeXTextClass</name>
     <text>Acquire</text>
     <x>205</x>
     <y>255</y>
@@ -1002,7 +962,7 @@ Size</text>
     <x>200</x>
     <y>320</y>
     <width>32</width>
-    <height>14</height>
+    <height>13</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="11.0">
       </font>
@@ -1044,9 +1004,9 @@ Size</text>
     <name>EDM activeMessageButtonClass</name>
     <actions>
       <action type="write_pv">
-        <description>Start</description>
         <pv_name>$(pv_name)</pv_name>
         <value>1</value>
+        <description>Start</description>
       </action>
     </actions>
     <pv_name>$(P)$(R)Acquire</pv_name>
@@ -1071,9 +1031,9 @@ Size</text>
     <name>EDM activeMessageButtonClass</name>
     <actions>
       <action type="write_pv">
-        <description>Stop</description>
         <pv_name>$(pv_name)</pv_name>
         <value>0</value>
+        <description>Stop</description>
       </action>
     </actions>
     <pv_name>$(P)$(R)Acquire</pv_name>
@@ -1181,9 +1141,9 @@ Size</text>
     <name>EDM relatedDisplayClass</name>
     <actions>
       <action type="open_display">
-        <description>Open Display</description>
         <file>../../../../ADCore/ADApp/op/bob/autoconvert/ADBase.bob</file>
         <target>tab</target>
+        <description>Open Display</description>
       </action>
     </actions>
     <text>Advanced...</text>
@@ -1867,178 +1827,6 @@ Size</text>
       <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
   </widget>
-  <widget type="group" version="3.0.0">
-    <name>EDM Group 16</name>
-    <x>200</x>
-    <y>135</y>
-    <width>95</width>
-    <height>30</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <rules>
-      <rule name="EDM visibility" prop_id="visible" out_exp="false">
-        <exp bool_exp="pv0&gt;=0.0 &amp;&amp; pv0&lt;1.0">
-          <value>true</value>
-        </exp>
-        <exp bool_exp="true">
-          <value>false</value>
-        </exp>
-        <pv_name>$(P)$(R)AcquireTime.DISA</pv_name>
-      </rule>
-    </rules>
-    <widget type="textentry" version="3.0.0">
-      <name>EDM TextentryClass</name>
-      <pv_name>$(P)$(R)AcquireTime</pv_name>
-      <x>5</x>
-      <y>5</y>
-      <width>85</width>
-      <font>
-        <font family="Liberation Sans" style="BOLD" size="12.0">
-        </font>
-      </font>
-      <foreground_color>
-        <color name="Controller" red="0" green="0" blue="255">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color name="GLOBAL canvas" red="200" green="200" blue="200">
-        </color>
-      </background_color>
-      <format>1</format>
-      <precision>6</precision>
-      <show_units>false</show_units>
-    </widget>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>EDM Group 17</name>
-    <x>290</x>
-    <y>135</y>
-    <width>95</width>
-    <height>30</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <rules>
-      <rule name="EDM visibility" prop_id="visible" out_exp="false">
-        <exp bool_exp="pv0&gt;=0.0 &amp;&amp; pv0&lt;1.0">
-          <value>true</value>
-        </exp>
-        <exp bool_exp="true">
-          <value>false</value>
-        </exp>
-        <pv_name>$(P)$(R)AcquireTime_RBV.DISA</pv_name>
-      </rule>
-    </rules>
-    <widget type="textupdate" version="2.0.0">
-      <name>EDM TextupdateClass</name>
-      <pv_name>$(P)$(R)AcquireTime_RBV</pv_name>
-      <x>5</x>
-      <y>5</y>
-      <width>85</width>
-      <font>
-        <font family="Liberation Sans" style="BOLD" size="12.0">
-        </font>
-      </font>
-      <foreground_color>
-        <color name="green-16" red="0" green="224" blue="0">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color name="Wid-bg/Anno-pri" red="105" green="105" blue="105">
-        </color>
-      </background_color>
-      <format>1</format>
-      <precision>6</precision>
-      <show_units>false</show_units>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>EDM Group 18</name>
-    <x>290</x>
-    <y>175</y>
-    <width>95</width>
-    <height>30</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <rules>
-      <rule name="EDM visibility" prop_id="visible" out_exp="false">
-        <exp bool_exp="pv0&gt;=0.0 &amp;&amp; pv0&lt;1.0">
-          <value>true</value>
-        </exp>
-        <exp bool_exp="true">
-          <value>false</value>
-        </exp>
-        <pv_name>$(P)$(R)AcquirePeriod_RBV.DISA</pv_name>
-      </rule>
-    </rules>
-    <widget type="textupdate" version="2.0.0">
-      <name>EDM TextupdateClass</name>
-      <pv_name>$(P)$(R)AcquirePeriod_RBV</pv_name>
-      <x>5</x>
-      <y>5</y>
-      <width>85</width>
-      <font>
-        <font family="Liberation Sans" style="BOLD" size="12.0">
-        </font>
-      </font>
-      <foreground_color>
-        <color name="green-16" red="0" green="224" blue="0">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color name="Wid-bg/Anno-pri" red="105" green="105" blue="105">
-        </color>
-      </background_color>
-      <format>1</format>
-      <precision>6</precision>
-      <show_units>false</show_units>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>EDM Group 19</name>
-    <x>200</x>
-    <y>175</y>
-    <width>95</width>
-    <height>30</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <rules>
-      <rule name="EDM visibility" prop_id="visible" out_exp="false">
-        <exp bool_exp="pv0&gt;=0.0 &amp;&amp; pv0&lt;1.0">
-          <value>true</value>
-        </exp>
-        <exp bool_exp="true">
-          <value>false</value>
-        </exp>
-        <pv_name>$(P)$(R)AcquirePeriod.DISA</pv_name>
-      </rule>
-    </rules>
-    <widget type="textentry" version="3.0.0">
-      <name>EDM TextentryClass</name>
-      <pv_name>$(P)$(R)AcquirePeriod</pv_name>
-      <x>5</x>
-      <y>5</y>
-      <width>85</width>
-      <font>
-        <font family="Liberation Sans" style="BOLD" size="12.0">
-        </font>
-      </font>
-      <foreground_color>
-        <color name="Controller" red="0" green="0" blue="255">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color name="GLOBAL canvas" red="200" green="200" blue="200">
-        </color>
-      </background_color>
-      <format>1</format>
-      <precision>6</precision>
-      <show_units>false</show_units>
-    </widget>
-  </widget>
   <widget type="textupdate" version="2.0.0">
     <name>EDM TextupdateClass</name>
     <pv_name>$(P)$(R)MaxSizeX_RBV</pv_name>
@@ -2359,6 +2147,218 @@ Size</text>
     <x>205</x>
     <y>335</y>
     <width>120</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="12.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="black-14" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="GLOBAL canvas" red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>EDM activeXTextClass_1</name>
+    <text>Acquisition Period (ms)</text>
+    <x>205</x>
+    <y>170</y>
+    <width>140</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="12.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="black-14" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="GLOBAL canvas" red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>EDM Group 16_1</name>
+    <x>200</x>
+    <y>145</y>
+    <width>95</width>
+    <height>30</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <rules>
+      <rule name="EDM visibility" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0&gt;=0.0 &amp;&amp; pv0&lt;1.0">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="true">
+          <value>false</value>
+        </exp>
+        <pv_name>$(P)$(R)AcquireTime.DISA</pv_name>
+      </rule>
+    </rules>
+    <widget type="textentry" version="3.0.0">
+      <name>EDM TextentryClass_1</name>
+      <pv_name>$(P)$(R)AcquireTimeMs</pv_name>
+      <x>5</x>
+      <y>5</y>
+      <width>85</width>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="12.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="Controller" red="0" green="0" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="GLOBAL canvas" red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <precision>6</precision>
+      <show_units>false</show_units>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>EDM Group 17_1</name>
+    <x>290</x>
+    <y>145</y>
+    <width>95</width>
+    <height>30</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <rules>
+      <rule name="EDM visibility" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0&gt;=0.0 &amp;&amp; pv0&lt;1.0">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="true">
+          <value>false</value>
+        </exp>
+        <pv_name>$(P)$(R)AcquireTime_RBV.DISA</pv_name>
+      </rule>
+    </rules>
+    <widget type="textupdate" version="2.0.0">
+      <name>EDM TextupdateClass_1</name>
+      <pv_name>$(P)$(R)AcquireTimeMs_RBV</pv_name>
+      <x>5</x>
+      <y>5</y>
+      <width>85</width>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="12.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="green-16" red="0" green="224" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Wid-bg/Anno-pri" red="105" green="105" blue="105">
+        </color>
+      </background_color>
+      <format>1</format>
+      <precision>6</precision>
+      <show_units>false</show_units>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>EDM Group 18_1</name>
+    <x>290</x>
+    <y>185</y>
+    <width>95</width>
+    <height>30</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <rules>
+      <rule name="EDM visibility" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0&gt;=0.0 &amp;&amp; pv0&lt;1.0">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="true">
+          <value>false</value>
+        </exp>
+        <pv_name>$(P)$(R)AcquirePeriod_RBV.DISA</pv_name>
+      </rule>
+    </rules>
+    <widget type="textupdate" version="2.0.0">
+      <name>EDM TextupdateClass_2</name>
+      <pv_name>$(P)$(R)AcquirePeriodMs_RBV</pv_name>
+      <x>5</x>
+      <y>5</y>
+      <width>85</width>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="12.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="green-16" red="0" green="224" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Wid-bg/Anno-pri" red="105" green="105" blue="105">
+        </color>
+      </background_color>
+      <format>1</format>
+      <precision>6</precision>
+      <show_units>false</show_units>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>EDM Group 19_1</name>
+    <x>200</x>
+    <y>185</y>
+    <width>95</width>
+    <height>30</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <rules>
+      <rule name="EDM visibility" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0&gt;=0.0 &amp;&amp; pv0&lt;1.0">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="true">
+          <value>false</value>
+        </exp>
+        <pv_name>$(P)$(R)AcquirePeriod.DISA</pv_name>
+      </rule>
+    </rules>
+    <widget type="textentry" version="3.0.0">
+      <name>EDM TextentryClass_2</name>
+      <pv_name>$(P)$(R)AcquirePeriodMs</pv_name>
+      <x>5</x>
+      <y>5</y>
+      <width>85</width>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="12.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="Controller" red="0" green="0" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="GLOBAL canvas" red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <precision>6</precision>
+      <show_units>false</show_units>
+    </widget>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>EDM activeXTextClass_2</name>
+    <text>Exposure (ms)</text>
+    <x>205</x>
+    <y>130</y>
+    <width>90</width>
     <font>
       <font family="Liberation Sans" style="BOLD" size="12.0">
       </font>
